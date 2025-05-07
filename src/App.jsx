@@ -4,15 +4,55 @@ function App() {
   return (
     <>
       <h1>React core concept</h1>
-      <Student></Student>
-      <Student></Student>
+
+      <Developer name="Golap" lang="python"></Developer>
+      <Developer name="Shafayat" lang="js"></Developer>
+      <Developer name="Abir" lang="c++"></Developer>
+      <Player player="Shakib Al" runs="11"></Player>
+      <Player player="Masrafi bin" runs="21"></Player>
+      <Salami resion="Eid" ammount="2000"></Salami>
+      <Salami resion="Exam" ammount="3000"></Salami>
+      <Salami resion="Bidai" ammount="1000"></Salami>
     </>
   );
 }
 
+function Salami({ resion, ammount }) {
+  return (
+    <div className="students">
+      <h2>Salami For : {resion}</h2>
+      <p>Ammount : {ammount}</p>
+    </div>
+  );
+}
+function Player(props) {
+  console.log(props);
+  return (
+    <div className="students">
+      <h3>Name : {props.player} </h3>
+      <p>Runs : {props.runs}</p>
+    </div>
+  );
+}
 function Person() {
   const age = 21;
   return <p>I am a person {age}</p>;
+}
+
+function Developer(props) {
+  console.log(props);
+  return (
+    <div
+      style={{
+        border: "2px solid blue",
+        borderRadius: "10px",
+        marginTop: "10px",
+      }}
+    >
+      <p>Developer : {props.name}</p>
+      <p>Technologhy : {props.lang}</p>
+    </div>
+  );
 }
 
 function Student() {
