@@ -1,10 +1,18 @@
 import "./App.css";
+import ToDo from "./Todo";
+import Actor from "./Actor";
 
 function App() {
+  const actors = ["shakib", "manna", "riyaj", "sabnur"];
   return (
     <>
+      {actors.map((actor) => (
+        <Actor actor={actor}></Actor>
+      ))}
       <h1>React core concept</h1>
 
+      <ToDo task="Learn react"></ToDo>
+      {/* 
       <Developer name="Golap" lang="python"></Developer>
       <Developer name="Shafayat" lang="js"></Developer>
       <Developer name="Abir" lang="c++"></Developer>
@@ -12,7 +20,7 @@ function App() {
       <Player player="Masrafi bin" runs="21"></Player>
       <Salami resion="Eid" ammount="2000"></Salami>
       <Salami resion="Exam" ammount="3000"></Salami>
-      <Salami resion="Bidai" ammount="1000"></Salami>
+      <Salami resion="Bidai" ammount="1000"></Salami> */}
     </>
   );
 }
